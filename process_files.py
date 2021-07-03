@@ -4,13 +4,13 @@ def unrar():
 		rar_files = f.readlines()
 	for fname in rar_files:
 		os.system("wget " + fname)
-	os.system("mv *.rar week1/")
-	for rf in os.listdir("./week1"):
-		f = os.path.join("./week1",rf)
+	os.system("mv *.rar week2/")
+	for rf in os.listdir("./week2"):
+		f = os.path.join("./week2",rf)
 		o = rarfile.RarFile(f)
 		for u in o.infolist():
 			print (u.filename, u.file_size)
-			o.extractall("./week1")
+			o.extractall("./week2")
 	
 if __name__ == "__main__":
 	unrar()
