@@ -1,0 +1,32 @@
+[maps]
+"circuit" = ["circuit.png", "circuit_dynamic.png"]
+"circuit 2" = ["circuit2.png", "circuit2_dynamic.png"]
+"circuit 3" = ["circuit3.png", "circuit3_dynamic.png"]
+
+[params]
+dt = 0.1 # 1 / planner update frequency
+V_MAX = 1.2 # Maximum velocity (m/s)
+W_MAX = 1.0 # Maximum angular velocity (rad/s)
+K_MAX = 1 # Max curvature (1 / minimum turning radius) (1/m)
+MIN_DIST = 1.0 # Minimum stopping distance
+ACC_MAX = 0.5 # Maximum linear acceleration (m/s^2)
+W_DOT_MAX = 3.0 # Maximum angular acceleration (rad/s^2)
+LATERAL_ACC_MAX = 1.5 # Maximum lateral acceleration (m/s^2)
+lidar_dist = 3
+goal_threshold = 0.5
+pred_horizon = 30
+w_cte = 1
+w_obs = 2
+w_speed = 5
+
+[circuit]
+start = [5, 3]
+goal = [25, 20]
+
+["circuit 2"]
+start = [5, 10]
+goal = [14, 12]
+
+["circuit 3"]
+start = [5, 5]
+goal = [3, 15]

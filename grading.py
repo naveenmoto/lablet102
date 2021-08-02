@@ -1,6 +1,8 @@
 import os, subprocess, glob
-week_id = "./week1"
-outdir = f"submissions/{week_id}/"
+import json
+import numpy as np
+week_id = "week4"
+outdir = f"./submissions/{week_id}/"
 num_students = 0
 week_stats = {}
 for name in os.listdir(week_id):
@@ -13,3 +15,6 @@ for name in os.listdir(week_id):
             subprocess.call(["jupyter-nbconvert",f"--output-dir={outdir+name}","--to","HTML",f])
             num_probs += 1
         week_stats[name] = num_probs
+
+with open(f"{outdir}stats.json", "w") as stat_file:
+    json.dump(week_stats, stat_file)

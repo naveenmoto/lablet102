@@ -4,7 +4,7 @@ def unrar():
 		rar_files = f.readlines()
 	for fname in rar_files:
 		os.system("wget " + fname)
-	os.system("mv *.rar week3/")
+	os.system("mv *.rar project/submissions/")
 
 	#for rf in os.listdir("./week3"):
 	#	f = os.path.join("./week3",rf)

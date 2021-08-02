@@ -1,0 +1,18 @@
+[positions]
+start = '(1,1)' #start position (coordinates in meters)
+goal = '(38,37)' #goal position (coordinates in meters)
+
+[params]
+dt = 0.1 # 1 / planner update frequency
+V_MAX = 5.0 # Maximum velocity (m/s)
+W_MAX = 1.5 # Maximum angular velocity (rad/s)
+K_MAX = 10.0 # Max curvature (1 / minimum turning radius) (1/m)
+MIN_DIST = 1.0 # Minimum stopping distance
+ACC_MAX = 5.0 # Maximum linear acceleration (m/s^2)
+W_DOT_MAX = 3.0 # Maximum angular acceleration (rad/s^2)
+LATERAL_ACC_MAX = 1.5 # Maximum lateral acceleration (m/s^2)
+goal_threshold = 0.5 #goal threshold in terms of meters
+pred_horizon=10 #prediction horizon in terms of meters
+w_cte = 1.0 #weight for the cross track error
+w_speed = 1.0 #weight for the speed term in cost term 
+w_err = 20.0
